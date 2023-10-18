@@ -165,6 +165,7 @@ const camera = new Camera(videoElement, {
 // ;
 const web= document.querySelector('.key1')
 web.addEventListener('click',()=>{
+  alert("Please wait while the modules are loaded")
   camera.start()
 })
     // Get the button element by its ID
