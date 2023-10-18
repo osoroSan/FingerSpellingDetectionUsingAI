@@ -54,6 +54,7 @@ async function loadModel(handImageData,boundingBox) {
     const classProbabilities = Array.from(predictions.dataSync());
     const predictedClass = classProbabilities.indexOf(Math.max(...classProbabilities));
     
+    drawBoundingBox(canvasCtx, boundingBox, { color: '#FF0000', lineWidth: 1.5 });
 
     // Draw the predicted class label above the bounding box
     const labelX = boundingBox.x + boundingBox.width / 2;
@@ -93,10 +94,11 @@ function onResults(results) {
       }
       // Extract the portion of the image corresponding to the bounding box from the canvas
 const handImageData = canvasCtx.getImageData(boundingBox.x, boundingBox.y, boundingBox.width, boundingBox.height);
-       // drawBoundingBox(canvasCtx, boundingBox, { color: '#FF0000', lineWidth: 1.5 });
+loadModel(handImageData,boundingBox)
+       drawBoundingBox(canvasCtx, boundingBox, { color: '#FF0000', lineWidth: 1.5 });
 
       drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, { color: '#00FF00', lineWidth: 1 });
-l     loadModel(handImageData,boundingBox)
+
       // Draw landmarks with reduced size
       for (const landmark of landmarks) {
         const x = landmark.x * canvasElement.width;
@@ -163,7 +165,6 @@ const camera = new Camera(videoElement, {
 // ;
 const web= document.querySelector('.key1')
 web.addEventListener('click',()=>{
-  alert("Please wait while the modules are loaded")
   camera.start()
 })
     // Get the button element by its ID
