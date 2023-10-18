@@ -54,7 +54,6 @@ async function loadModel(handImageData,boundingBox) {
     const classProbabilities = Array.from(predictions.dataSync());
     const predictedClass = classProbabilities.indexOf(Math.max(...classProbabilities));
     
-    drawBoundingBox(canvasCtx, boundingBox, { color: '#FF0000', lineWidth: 1.5 });
 
     // Draw the predicted class label above the bounding box
     const labelX = boundingBox.x + boundingBox.width / 2;
