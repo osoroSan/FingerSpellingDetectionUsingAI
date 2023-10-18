@@ -93,7 +93,7 @@ function onResults(results) {
       }
       // Extract the portion of the image corresponding to the bounding box from the canvas
 const handImageData = canvasCtx.getImageData(boundingBox.x, boundingBox.y, boundingBox.width, boundingBox.height);
-       drawBoundingBox(canvasCtx, boundingBox, { color: '#FF0000', lineWidth: 1.5 });
+       // drawBoundingBox(canvasCtx, boundingBox, { color: '#FF0000', lineWidth: 1.5 });
 
       drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, { color: '#00FF00', lineWidth: 1 });
 l     loadModel(handImageData,boundingBox)
