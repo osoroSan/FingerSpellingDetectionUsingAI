@@ -96,7 +96,7 @@ const handImageData = canvasCtx.getImageData(boundingBox.x, boundingBox.y, bound
        drawBoundingBox(canvasCtx, boundingBox, { color: '#FF0000', lineWidth: 1.5 });
 
       drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, { color: '#00FF00', lineWidth: 1 });
-l     oadModel(handImageData,boundingBox)
+l     loadModel(handImageData,boundingBox)
       // Draw landmarks with reduced size
       for (const landmark of landmarks) {
         const x = landmark.x * canvasElement.width;
