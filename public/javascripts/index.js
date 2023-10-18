@@ -7,7 +7,7 @@ const labels= ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 
 async function loadModel(handImageData,boundingBox) {
   try {
     // Load the model from the 'model1.json' file
-    const model = await tf.loadLayersModel('model1.json');
+    const model = await tf.loadLayersModel('javascripts/model1.json');
 
     // Create a canvas element and set its dimensions to match the input image
     let canvas = document.createElement('canvas');
