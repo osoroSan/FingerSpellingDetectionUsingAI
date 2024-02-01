@@ -1,5 +1,6 @@
 # Hand Detection Using AI
 link: https://fluffy-fish-jodhpurs.cyclic.app/
+
 Welcome to the Hand Detection Using AI project! This project focuses on utilizing Artificial Intelligence for hand detection.
 
 ## Table of Contents
